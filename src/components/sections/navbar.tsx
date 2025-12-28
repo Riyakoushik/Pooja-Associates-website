@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { Logo } from '@/components/ui/logo';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,31 +40,11 @@ const Navbar = () => {
             transition: 'opacity 600ms ease-out 100ms, transform 600ms ease-out 100ms',
           }}
         >
-                <Link href="/" className="flex items-center gap-2.5 no-underline group">
-                  <span className="text-[22px] font-semibold text-[#141414] tracking-tight font-display transition-colors duration-300 group-hover:text-[#1A4D43]">
-                    Pooja Associates
-                  </span>
-                </Link>
-        </div>
-
-        <div className="hidden md:flex items-center gap-8">
-          {['Services', 'Features', 'Pricing', 'How it work'].map((item, index) => (
-            <a 
-              key={item}
-              href={`#${item.toLowerCase().replace(' ', '-')}`}
-              className="relative text-[16px] font-medium text-[#121212] no-underline group overflow-hidden"
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? 'translateY(0)' : 'translateY(-10px)',
-                transition: `opacity 500ms ease-out ${200 + index * 100}ms, transform 500ms ease-out ${200 + index * 100}ms`,
-              }}
-            >
-              <span className="relative z-10 transition-colors duration-300 group-hover:text-[#1A4D43]">
-                {item}
-              </span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1A4D43] transition-all duration-300 group-hover:w-full" />
-            </a>
-          ))}
+          <Link href="/" className="flex items-center gap-2.5 no-underline group">
+            <span className="text-[22px] font-semibold text-[#141414] tracking-tight font-display transition-colors duration-300 group-hover:text-[#1A4D43]">
+              Pooja Associates
+            </span>
+          </Link>
         </div>
 
         <div 
@@ -77,14 +55,14 @@ const Navbar = () => {
             transition: 'opacity 600ms ease-out 400ms, transform 600ms ease-out 400ms',
           }}
         >
-            <a 
-              href="https://wa.me/918357892019" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-2.5 bg-[#1A4D43] text-white py-2.5 px-6 rounded-full text-[16px] font-semibold transition-all duration-300 no-underline hover:bg-[#153d35] hover:scale-105 hover:shadow-lg active:scale-95"
-            >
-              <span>Join Us</span>
-              <div className="relative w-5 h-5 flex items-center justify-center bg-white rounded-full transition-all duration-300 group-hover:rotate-45">
+          <a 
+            href="https://wa.me/918357892019" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2.5 bg-[#1A4D43] text-white py-2.5 px-6 rounded-full text-[16px] font-semibold transition-all duration-300 no-underline hover:bg-[#153d35] hover:scale-105 hover:shadow-lg active:scale-95"
+          >
+            <span>Join Us</span>
+            <div className="relative w-5 h-5 flex items-center justify-center bg-white rounded-full transition-all duration-300 group-hover:rotate-45">
               <svg 
                 width="12" 
                 height="12" 
