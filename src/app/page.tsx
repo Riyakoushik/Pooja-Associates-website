@@ -1,6 +1,5 @@
 import Navbar from "@/components/sections/navbar";
 import HeroSection from "@/components/sections/hero";
-import Partners from "@/components/sections/partners";
 import WhyUs from "@/components/sections/why-us";
 import ServicesCarousel from "@/components/sections/services-carousel";
 import FeaturesGrid from "@/components/sections/features-grid";
@@ -18,7 +17,6 @@ export default function Home() {
       <Navbar />
       <main className="flex-grow pt-[79px]">
         <HeroSection />
-        <Partners />
         <WhyUs />
         <ServicesCarousel />
         <FeaturesGrid />
