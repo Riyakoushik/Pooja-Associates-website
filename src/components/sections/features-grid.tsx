@@ -1,5 +1,8 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
+import { AnimatedSection, StaggeredChildren } from '@/components/ui/animated-section';
 
 const features = [
   {
@@ -41,49 +44,50 @@ export default function FeaturesGrid() {
       className="w-full bg-white py-[120px] px-6 lg:px-0"
     >
       <div className="max-w-[1200px] mx-auto text-center">
-        {/* Section Tag */}
-        <div className="flex justify-center items-center gap-2 mb-6">
-          <div className="w-2 h-2 rounded-full bg-[#1A4D43]" />
-          <span className="text-[14px] font-medium uppercase tracking-wider text-[#1A4D43]">
-            Features
-          </span>
-        </div>
+        <AnimatedSection>
+          <div className="flex justify-center items-center gap-2 mb-6">
+            <div className="w-2 h-2 rounded-full bg-[#1A4D43]" />
+            <span className="text-[14px] font-medium uppercase tracking-wider text-[#1A4D43]">
+              Features
+            </span>
+          </div>
 
-        {/* Section Heading */}
-        <h2 className="text-[48px] font-semibold leading-[1.2] text-[#121212] mb-20 max-w-[800px] mx-auto">
-          Key benefits that set us apart from other ferms
-        </h2>
+          <h2 className="text-[48px] font-semibold leading-[1.2] text-[#121212] mb-20 max-w-[800px] mx-auto">
+            Key benefits that set us apart from other ferms
+          </h2>
+        </AnimatedSection>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+        <StaggeredChildren 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16"
+          staggerDelay={100}
+          baseDelay={200}
+        >
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="flex flex-col items-center text-center group"
+              className="flex flex-col items-center text-center group cursor-pointer"
             >
-              {/* Icon Container */}
               <div className="mb-8 relative flex items-center justify-center">
-                <div className="w-12 h-12 bg-[#1A4D43] rounded-full flex items-center justify-center p-3 shadow-md">
+                <div className="w-12 h-12 bg-[#1A4D43] rounded-full flex items-center justify-center p-3 shadow-md transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg group-hover:bg-[#143B33]">
                   <Image
                     src={feature.icon}
                     alt={feature.title}
                     width={24}
                     height={24}
-                    className="w-6 h-6 invert brightness-0"
+                    className="w-6 h-6 invert brightness-0 transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
               </div>
 
-              {/* Text Content */}
-              <h3 className="text-[24px] font-semibold text-[#121212] mb-4">
+              <h3 className="text-[24px] font-semibold text-[#121212] mb-4 transition-colors duration-300 group-hover:text-[#1A4D43]">
                 {feature.title}
               </h3>
-              <p className="text-[18px] leading-[1.6] text-[#555555] max-w-[320px]">
+              <p className="text-[18px] leading-[1.6] text-[#555555] max-w-[320px] transition-all duration-300 group-hover:text-[#333]">
                 {feature.description}
               </p>
             </div>
           ))}
-        </div>
+        </StaggeredChildren>
       </div>
     </section>
   );

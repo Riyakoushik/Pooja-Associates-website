@@ -3,11 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
-/**
- * Services carousel section featuring card-based navigation with images and descriptions.
- * Consistent with the high-end consulting agency aesthetic (Stratex).
- */
+import { AnimatedSection } from '@/components/ui/animated-section';
 
 const services = [
   {
@@ -39,70 +35,74 @@ export default function ServicesCarousel() {
       className="py-[120px] bg-white overflow-hidden flex flex-col items-center"
     >
       <div className="container max-w-[1200px] px-6 text-center">
-        {/* Section Pill Tag */}
-        <div className="flex justify-center mb-6">
-          <div className="flex items-center gap-2 px-3 py-1.5 bg-[#F7F9F8] rounded-full border border-[#E6E6E6]">
-            <div className="w-2 h-2 rounded-full bg-[#1A4D43]"></div>
-            <span className="text-[14px] font-medium text-[#1A4D43] uppercase tracking-wider">Services</span>
+        <AnimatedSection>
+          <div className="flex justify-center mb-6">
+            <div className="flex items-center gap-2 px-3 py-1.5 bg-[#F7F9F8] rounded-full border border-[#E6E6E6]">
+              <div className="w-2 h-2 rounded-full bg-[#1A4D43]"></div>
+              <span className="text-[14px] font-medium text-[#1A4D43] uppercase tracking-wider">Services</span>
+            </div>
           </div>
-        </div>
 
-        {/* Heading */}
-        <h2 className="text-[48px] font-semibold text-[#121212] leading-[1.2] mb-16 max-w-[700px] mx-auto">
-          Reliable expertise to drive your greatest success
-        </h2>
+          <h2 className="text-[48px] font-semibold text-[#121212] leading-[1.2] mb-16 max-w-[700px] mx-auto">
+            Reliable expertise to drive your greatest success
+          </h2>
+        </AnimatedSection>
       </div>
 
-      {/* Carousel Container */}
-      <div className="relative w-full max-w-[1920px] overflow-hidden">
-        {/* Navigation Arrows */}
+      <AnimatedSection className="relative w-full max-w-[1920px] overflow-hidden" delay={200}>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[1300px] flex justify-between px-4 z-20 pointer-events-none">
-          <button className="w-12 h-12 rounded-full bg-[#1A4D43] text-white flex items-center justify-center pointer-events-auto shadow-lg hover:bg-[#153a33] transition-colors cursor-pointer">
+          <button className="w-12 h-12 rounded-full bg-[#1A4D43] text-white flex items-center justify-center pointer-events-auto shadow-lg transition-all duration-300 cursor-pointer hover:bg-[#153a33] hover:scale-110 hover:shadow-xl active:scale-95">
             <ChevronLeft size={24} />
           </button>
-          <button className="w-12 h-12 rounded-full bg-[#1A4D43] text-white flex items-center justify-center pointer-events-auto shadow-lg hover:bg-[#153a33] transition-colors cursor-pointer">
+          <button className="w-12 h-12 rounded-full bg-[#1A4D43] text-white flex items-center justify-center pointer-events-auto shadow-lg transition-all duration-300 cursor-pointer hover:bg-[#153a33] hover:scale-110 hover:shadow-xl active:scale-95">
             <ChevronRight size={24} />
           </button>
         </div>
 
-        {/* Sliders Area - Horizontal Scroll Simulation */}
         <div className="flex items-center justify-center gap-6 px-4 md:px-0">
-          {/* We show 3 main cards for the "active" view snapshot as per design */}
           {services.slice(0, 3).map((service, index) => (
-            <div 
-              key={index} 
-              className={`relative overflow-hidden group transition-all duration-500 rounded-[24px] 
-              ${index === 1 ? 'w-[480px] h-[580px] z-10 scale-100 opacity-100' : 'w-[400px] h-[480px] opacity-40 scale-90 grayscale'}`}
+            <AnimatedSection 
+              key={index}
+              delay={300 + index * 150}
+              direction={index === 0 ? 'left' : index === 2 ? 'right' : 'up'}
+              className={`relative overflow-hidden group rounded-[24px] cursor-pointer
+              ${index === 1 ? 'w-[480px] h-[580px] z-10 scale-100 opacity-100' : 'w-[400px] h-[480px] opacity-60 scale-90'}`}
             >
-              <Image
-                src={service.image}
-                alt={service.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 480px"
-              />
-              
-              {/* Overlay with Content */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10">
-                <h3 className="text-[24px] font-semibold text-white mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-[16px] text-white/80 leading-relaxed translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  {service.description}
-                </p>
+              <div className={`relative w-full h-full transition-all duration-700 ${index !== 1 ? 'grayscale hover:grayscale-0' : ''}`}>
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 480px"
+                />
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-all duration-500 group-hover:from-black/90" />
+                
+                <div className="absolute inset-0 flex flex-col justify-end p-10">
+                  <h3 className="text-[24px] font-semibold text-white mb-3 transform transition-all duration-500 group-hover:-translate-y-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-[16px] text-white/80 leading-relaxed transform translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                    {service.description}
+                  </p>
+                </div>
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
-      </div>
+      </AnimatedSection>
       
-      {/* Decorative dots for pagination */}
-      <div className="flex gap-2.5 mt-10">
-        <div className="w-2.5 h-2.5 rounded-full bg-[#1A4D43]"></div>
-        <div className="w-2.5 h-2.5 rounded-full bg-[#E6E6E6]"></div>
-        <div className="w-2.5 h-2.5 rounded-full bg-[#E6E6E6]"></div>
-        <div className="w-2.5 h-2.5 rounded-full bg-[#E6E6E6]"></div>
-      </div>
+      <AnimatedSection delay={800} className="flex gap-2.5 mt-10">
+        {[0, 1, 2, 3].map((dot, i) => (
+          <div 
+            key={i}
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer hover:scale-125 ${
+              i === 0 ? 'bg-[#1A4D43]' : 'bg-[#E6E6E6] hover:bg-[#1A4D43]/50'
+            }`}
+          />
+        ))}
+      </AnimatedSection>
     </section>
   );
 }

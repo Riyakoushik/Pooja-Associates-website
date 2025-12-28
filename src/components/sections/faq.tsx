@@ -2,11 +2,7 @@
 
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
-
-/**
- * FAQ section for Stratex consulting agency.
- * Features a clean accordion-style list with green circular icons.
- */
+import { AnimatedSection } from '@/components/ui/animated-section';
 
 interface FAQItem {
   id: string;
@@ -57,8 +53,7 @@ const FAQSection: React.FC = () => {
   return (
     <section id="faq" className="py-[120px] bg-white">
       <div className="container max-w-[1200px] px-6 mx-auto">
-        <div className="flex flex-col items-center mb-16">
-          {/* Section Tag */}
+        <AnimatedSection className="flex flex-col items-center mb-16">
           <div className="flex items-center gap-2 px-3 py-1 bg-[#F7F9F8] rounded-full border border-[#E6E6E6] mb-6">
             <div className="w-2 h-2 rounded-full bg-[#1A4D43]" />
             <span className="text-[14px] font-medium text-[#1A4D43] uppercase tracking-wider">
@@ -66,49 +61,50 @@ const FAQSection: React.FC = () => {
             </span>
           </div>
 
-          {/* Heading */}
           <h2 className="text-[48px] font-semibold text-[#121212] leading-[1.2] text-center max-w-[700px]">
             Answers to your most common questions
           </h2>
-        </div>
+        </AnimatedSection>
 
-        {/* Accordion List */}
         <div className="max-w-[800px] mx-auto">
-          {faqData.map((item) => (
-            <div
+          {faqData.map((item, index) => (
+            <AnimatedSection 
               key={item.id}
-              className="border-b border-[#E6E6E6] last:border-0"
+              delay={index * 100}
+              direction="up"
             >
-              <button
-                onClick={() => toggleAccordion(item.id)}
-                className="w-full flex items-center justify-between py-8 text-left group focus:outline-none"
-              >
-                <span className="text-[20px] font-medium text-[#121212] transition-colors duration-200 group-hover:text-[#1A4D43]">
-                  {item.question}
-                </span>
+              <div className="border-b border-[#E6E6E6] last:border-0 transition-all duration-300 hover:bg-[#FAFAFA] rounded-lg">
+                <button
+                  onClick={() => toggleAccordion(item.id)}
+                  className="w-full flex items-center justify-between py-8 px-4 text-left group focus:outline-none"
+                >
+                  <span className="text-[20px] font-medium text-[#121212] transition-all duration-300 group-hover:text-[#1A4D43] group-hover:translate-x-2">
+                    {item.question}
+                  </span>
+                  <div
+                    className={`flex items-center justify-center w-8 h-8 rounded-full transition-all duration-500 ${
+                      openId === item.id
+                        ? "bg-[#1A4D43] text-white rotate-180 scale-110"
+                        : "bg-[#E8F5EE] text-[#1A4D43] group-hover:scale-110"
+                    }`}
+                  >
+                    <ChevronDown size={18} strokeWidth={2.5} />
+                  </div>
+                </button>
+                
                 <div
-                  className={`flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 ${
-                    openId === item.id
-                      ? "bg-[#1A4D43] text-white rotate-180"
-                      : "bg-[#E8F5EE] text-[#1A4D43]"
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                    openId === item.id 
+                      ? "max-h-[500px] opacity-100 pb-8" 
+                      : "max-h-0 opacity-0"
                   }`}
                 >
-                  <ChevronDown size={18} strokeWidth={2.5} />
+                  <p className="text-[18px] leading-[1.6] text-[#555555] px-4 transform transition-all duration-300">
+                    {item.answer}
+                  </p>
                 </div>
-              </button>
-              
-              <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  openId === item.id 
-                    ? "max-h-[500px] opacity-100 pb-8" 
-                    : "max-h-0 opacity-0"
-                }`}
-              >
-                <p className="text-[18px] leading-[1.6] text-[#555555]">
-                  {item.answer}
-                </p>
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>
