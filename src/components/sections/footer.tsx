@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Logo } from '@/components/ui/logo';
 
 const Footer = () => {
   return (
@@ -9,18 +10,17 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-24 mb-20">
           
-            {/* Logo and Description */}
-            <div className="flex flex-col gap-6 max-w-[320px]">
-              <Link href="/" className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-[#1A4D43] flex items-center justify-center rounded-[10px] shadow-[0px_0px_12px_rgba(0,0,0,0.07),inset_0px_2px_4px_rgba(255,255,255,0.25)]">
-                  <span className="text-white font-bold text-xs">PA</span>
-                </div>
-                  <span className="text-[22px] font-semibold text-[#121212] font-display">Pooja Associates</span>
+              <div className="flex flex-col gap-6 max-w-[320px]">
+                <Link href="/" className="flex items-center gap-2 group">
+                  <Logo size={32} />
+                  <span className="text-[22px] font-semibold text-[#121212] font-display transition-colors duration-300 group-hover:text-[#1A4D43]">
+                    Pooja Associates
+                  </span>
                 </Link>
-              <p className="text-[18px] text-[#555555] leading-[1.6]">
-                Growth-focused marketing and promotion services for registered and subscribed customers.
-              </p>
-            </div>
+                <p className="text-[18px] text-[#555555] leading-[1.6]">
+                  Growth-focused marketing and promotion services for registered and subscribed customers.
+                </p>
+              </div>
 
           {/* Menu Column */}
           <div className="flex flex-col gap-6">

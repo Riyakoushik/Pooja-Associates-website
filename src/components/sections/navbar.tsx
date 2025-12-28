@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Logo } from '@/components/ui/logo';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,19 +42,12 @@ const Navbar = () => {
             transition: 'opacity 600ms ease-out 100ms, transform 600ms ease-out 100ms',
           }}
         >
-            <Link href="/" className="flex items-center gap-2.5 no-underline group">
-              <div 
-                className="flex items-center justify-center w-8 h-8 rounded-[10px] bg-[#1F514C] transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"
-                style={{
-                  boxShadow: "rgba(0, 0, 0, 0.07) 0px 0px 12px 0px, rgba(255, 255, 255, 0.25) 0px 2px 4px 0px inset"
-                }}
-              >
-                <span className="text-white font-bold text-sm">PA</span>
-              </div>
-              <span className="text-[22px] font-semibold text-[#141414] tracking-tight font-display transition-colors duration-300 group-hover:text-[#1A4D43]">
-                Pooja Associates
-              </span>
-            </Link>
+              <Link href="/" className="flex items-center gap-2.5 no-underline group">
+                <Logo size={36} />
+                <span className="text-[22px] font-semibold text-[#141414] tracking-tight font-display transition-colors duration-300 group-hover:text-[#1A4D43]">
+                  Pooja Associates
+                </span>
+              </Link>
         </div>
 
         <div className="hidden md:flex items-center gap-8">

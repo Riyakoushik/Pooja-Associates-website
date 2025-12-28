@@ -1,37 +1,24 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Logo } from '@/components/ui/logo';
 
 const Navigation = () => {
   return (
     <div className="fixed top-0 left-0 right-0 z-[100] w-full bg-white/95 backdrop-blur-sm border-b border-[#E6E6E6]">
       <div className="container mx-auto max-w-[1200px] px-[25px]">
         <nav className="flex items-center justify-between h-[79px] py-5">
-          {/* Logo Section */}
-          <div className="flex items-center">
-            <Link 
-              href="/" 
-              className="flex items-center gap-2 text-[22px] font-serif font-medium text-[#1A1A1A] no-underline hover:opacity-80 transition-opacity"
-            >
-              <div 
-                className="flex items-center justify-center w-8 h-8 rounded-[10px] bg-[#1F514C]"
-                style={{
-                  boxShadow: 'rgba(0, 0, 0, 0.07) 0px 0px 12px 0px, rgba(255, 255, 255, 0.25) 0px 2px 4px 0px inset'
-                }}
+            <div className="flex items-center">
+              <Link 
+                href="/" 
+                className="flex items-center gap-2 text-[22px] font-medium text-[#1A1A1A] no-underline group"
               >
-                <Image 
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5aade3a5-fd00-4189-b091-576124594133-stratex-framer-website/assets/svgs/AUOOfMLqx3UrCzpH7eIka9rF8-1.svg" 
-                  alt="Stratex Logo" 
-                  width={15}
-                  height={15}
-                  className="w-[15px] h-[15px] object-contain"
-                />
-              </div>
-              <span className="leading-none -mt-0.5" style={{ fontFamily: '"Hedvig Letters Serif", serif' }}>
-                Stratex
-              </span>
-            </Link>
-          </div>
+                <Logo size={32} />
+                <span className="leading-none -mt-0.5 font-semibold transition-colors duration-300 group-hover:text-[#1A4D43]" style={{ fontFamily: '"Hedvig Letters Serif", serif' }}>
+                  Pooja Associates
+                </span>
+              </Link>
+            </div>
 
           {/* Centered Navigation Links */}
           <div className="hidden md:flex items-center gap-[30px]">
