@@ -6,7 +6,6 @@ import FeaturesGrid from "@/components/sections/features-grid";
 import Pricing from "@/components/sections/pricing";
 import ProcessSteps from "@/components/sections/process-steps";
 import ImpactStats from "@/components/sections/impact-stats";
-import TeamSection from "@/components/sections/team";
 import FAQSection from "@/components/sections/faq";
 import ContactUs from "@/components/sections/contact-us";
 import Footer from "@/components/sections/footer";
@@ -23,7 +22,6 @@ export default function Home() {
         <Pricing />
         <ProcessSteps />
         <ImpactStats />
-        <TeamSection />
         <FAQSection />
         <ContactUs />
       </main>
