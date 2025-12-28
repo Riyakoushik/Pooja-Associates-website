@@ -42,12 +42,11 @@ const Navbar = () => {
             transition: 'opacity 600ms ease-out 100ms, transform 600ms ease-out 100ms',
           }}
         >
-              <Link href="/" className="flex items-center gap-2.5 no-underline group">
-                <Logo size={36} />
-                <span className="text-[22px] font-semibold text-[#141414] tracking-tight font-display transition-colors duration-300 group-hover:text-[#1A4D43]">
-                  Pooja Associates
-                </span>
-              </Link>
+                <Link href="/" className="flex items-center gap-2.5 no-underline group">
+                  <span className="text-[22px] font-semibold text-[#141414] tracking-tight font-display transition-colors duration-300 group-hover:text-[#1A4D43]">
+                    Pooja Associates
+                  </span>
+                </Link>
         </div>
 
         <div className="hidden md:flex items-center gap-8">

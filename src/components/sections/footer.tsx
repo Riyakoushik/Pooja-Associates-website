@@ -10,17 +10,16 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-24 mb-20">
           
-              <div className="flex flex-col gap-6 max-w-[320px]">
-                <Link href="/" className="flex items-center gap-2 group">
-                  <Logo size={32} />
-                  <span className="text-[22px] font-semibold text-[#121212] font-display transition-colors duration-300 group-hover:text-[#1A4D43]">
-                    Pooja Associates
-                  </span>
-                </Link>
-                <p className="text-[18px] text-[#555555] leading-[1.6]">
-                  Growth-focused marketing and promotion services for registered and subscribed customers.
-                </p>
-              </div>
+                <div className="flex flex-col gap-6 max-w-[320px]">
+                  <Link href="/" className="flex items-center gap-2 group">
+                    <span className="text-[22px] font-semibold text-[#121212] font-display transition-colors duration-300 group-hover:text-[#1A4D43]">
+                      Pooja Associates
+                    </span>
+                  </Link>
+                  <p className="text-[18px] text-[#555555] leading-[1.6]">
+                    Growth-focused marketing and promotion services for registered and subscribed customers.
+                  </p>
+                </div>
 
           {/* Menu Column */}
           <div className="flex flex-col gap-6">
