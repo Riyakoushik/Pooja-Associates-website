@@ -1,11 +1,14 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { ChevronDown, ArrowRight } from 'lucide-react';
 import { AnimatedSection } from '@/components/ui/animated-section';
 
 const ContactUs = () => {
+  const [service, setService] = useState("");
+  const [budget, setBudget] = useState("");
+
   return (
     <section id="contact" className="w-full py-[120px] bg-white">
       <div className="container mx-auto max-w-[1240px] px-5">
@@ -45,15 +48,16 @@ const ContactUs = () => {
                 </div>
                 <div className="relative group">
                   <select 
-                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white/60 focus:outline-none focus:border-white transition-all duration-300 appearance-none cursor-pointer focus:bg-white/15 focus:scale-[1.02]"
-                    defaultValue=""
+                    className={`w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 transition-all duration-300 appearance-none cursor-pointer focus:bg-white/15 focus:scale-[1.02] focus:outline-none focus:border-white ${service ? 'text-white' : 'text-white/60'}`}
+                    value={service}
+                    onChange={(e) => setService(e.target.value)}
                   >
-                      <option value="" disabled>Service...</option>
-                      <option value="content">Content Design & Marketing</option>
-                      <option value="social">Social Media Marketing</option>
-                      <option value="analysis">Business Analysis</option>
-                      <option value="telemarketing">Tele-marketing</option>
-                      <option value="loans">Business Loan Processing</option>
+                      <option value="" disabled className="text-gray-400 bg-white">Service...</option>
+                      <option value="content" className="text-black bg-white">Content Design & Marketing</option>
+                      <option value="social" className="text-black bg-white">Social Media Marketing</option>
+                      <option value="analysis" className="text-black bg-white">Business Analysis</option>
+                      <option value="telemarketing" className="text-black bg-white">Tele-marketing</option>
+                      <option value="loans" className="text-black bg-white">Business Loan Processing</option>
                     </select>
                   <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/60 transition-transform duration-300 group-focus-within:rotate-180">
                     <ChevronDown size={18} />
@@ -61,13 +65,14 @@ const ContactUs = () => {
                 </div>
                 <div className="relative md:col-span-2 group">
                   <select 
-                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white/60 focus:outline-none focus:border-white transition-all duration-300 appearance-none cursor-pointer focus:bg-white/15 focus:scale-[1.02]"
-                    defaultValue=""
+                    className={`w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 transition-all duration-300 appearance-none cursor-pointer focus:bg-white/15 focus:scale-[1.02] focus:outline-none focus:border-white ${budget ? 'text-white' : 'text-white/60'}`}
+                    value={budget}
+                    onChange={(e) => setBudget(e.target.value)}
                   >
-                    <option value="" disabled>Budget...</option>
-                    <option value="small">&lt; $5k</option>
-                    <option value="medium">$5k - $20k</option>
-                    <option value="large">$20k+</option>
+                    <option value="" disabled className="text-gray-400 bg-white">Budget...</option>
+                    <option value="small" className="text-black bg-white">&lt; $5k</option>
+                    <option value="medium" className="text-black bg-white">$5k - $20k</option>
+                    <option value="large" className="text-black bg-white">$20k+</option>
                   </select>
                   <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/60 transition-transform duration-300 group-focus-within:rotate-180">
                     <ChevronDown size={18} />
