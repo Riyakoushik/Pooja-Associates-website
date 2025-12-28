@@ -7,33 +7,33 @@ import { AnimatedSection, StaggeredChildren } from '@/components/ui/animated-sec
 const features = [
   {
     icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5aade3a5-fd00-4189-b091-576124594133-stratex-framer-website/assets/svgs/TTZ62FEtZDMeSZdqiivrcLw73go-9.svg",
-    title: "Unlimited consultations",
-    description: "Schedule as many strategy sessions as needed to your business"
+    title: "Digital Promotion",
+    description: "Boost your online visibility with targeted digital and social media marketing."
   },
   {
     icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5aade3a5-fd00-4189-b091-576124594133-stratex-framer-website/assets/svgs/1EdiAQPtZngDAXZvIBVt6YZQMOs-10.svg",
-    title: "Tailored solutions",
-    description: "Get customized strategies designed to with your unique goals"
+    title: "Business Analysis",
+    description: "Expert analysis to streamline your operations and maximize growth potential."
   },
   {
     icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5aade3a5-fd00-4189-b091-576124594133-stratex-framer-website/assets/svgs/nK5FIrBu2W1QnWt7F7A76OOkNzs-11.svg",
-    title: "Expert insights",
-    description: "Leverage industry-leading expertise to drive informed decisions"
+    title: "Tele-Marketing",
+    description: "Connect directly with your customers through our professional outreach services."
   },
   {
     icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5aade3a5-fd00-4189-b091-576124594133-stratex-framer-website/assets/svgs/qASKRnUc5NcULrxYrJP31AKMQY-12.svg",
-    title: "Data strategies",
-    description: "Make confident moves with insights backed by research & analytics."
+    title: "Loan Processing",
+    description: "Simplify your financing journey with our expert business loan assistance."
   },
   {
     icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5aade3a5-fd00-4189-b091-576124594133-stratex-framer-website/assets/svgs/SJsjSKaZDYOSRjlGEaPo28mdbp8-13.svg",
-    title: "Ongoing support",
-    description: "Stay ahead with continuous guidance and recommendation"
+    title: "App Listings",
+    description: "Professional management for your app store presence and subscriptions."
   },
   {
     icon: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5aade3a5-fd00-4189-b091-576124594133-stratex-framer-website/assets/svgs/qZeNjj6DIXgksqzzaIH2krvnvQ-14.svg",
-    title: "Seamless execution",
-    description: "From planning to implementation, we ensure a smooth & process"
+    title: "Flexible Work",
+    description: "Explore opportunities with our work-from-home support and BPO services."
   }
 ];
 
@@ -53,7 +53,7 @@ export default function FeaturesGrid() {
           </div>
 
           <h2 className="text-[48px] font-semibold leading-[1.2] text-[#121212] mb-20 max-w-[800px] mx-auto">
-            Key benefits that set us apart from other ferms
+            Key benefits that set us apart from other firms
           </h2>
         </AnimatedSection>
 

@@ -40,49 +40,49 @@ const HeroSection: React.FC = () => {
               <span className="text-white text-sm font-medium font-sans">Rated 4.9/5</span>
             </div>
 
-            <h1 
-              className="text-white text-[44px] md:text-[56px] lg:text-[64px] font-bold leading-[1.1] tracking-[-0.03em] mb-6 max-w-[600px]"
-              style={{
-                opacity: isLoaded ? 1 : 0,
-                transform: isLoaded ? 'translateY(0)' : 'translateY(30px)',
-                transition: 'opacity 700ms ease-out, transform 700ms ease-out',
-                transitionDelay: '400ms',
-              }}
-            >
-              Expert consulting that drives real growth
-            </h1>
-
-            <p 
-              className="text-[#E8F5EE] text-lg md:text-xl font-normal leading-[1.6] mb-10 max-w-[500px] opacity-90"
-              style={{
-                opacity: isLoaded ? 0.9 : 0,
-                transform: isLoaded ? 'translateY(0)' : 'translateY(30px)',
-                transition: 'opacity 700ms ease-out, transform 700ms ease-out',
-                transitionDelay: '500ms',
-              }}
-            >
-              Elevate your business with expert insights, tailored strategies, and unwavering support designed
-            </p>
-
-            <div 
-              className="flex flex-wrap items-center gap-4"
-              style={{
-                opacity: isLoaded ? 1 : 0,
-                transform: isLoaded ? 'translateY(0)' : 'translateY(30px)',
-                transition: 'opacity 700ms ease-out, transform 700ms ease-out',
-                transitionDelay: '600ms',
-              }}
-            >
-              <a 
-                href="#contact" 
-                className="group inline-flex items-center justify-center bg-white text-[#1A4D43] px-8 py-4 rounded-full font-semibold text-base transition-all duration-300 hover:bg-[#E8F5EE] hover:scale-105 hover:shadow-lg"
+              <h1 
+                className="text-white text-[44px] md:text-[56px] lg:text-[64px] font-bold leading-[1.1] tracking-[-0.03em] mb-6 max-w-[600px]"
+                style={{
+                  opacity: isLoaded ? 1 : 0,
+                  transform: isLoaded ? 'translateY(0)' : 'translateY(30px)',
+                  transition: 'opacity 700ms ease-out, transform 700ms ease-out',
+                  transitionDelay: '400ms',
+                }}
               >
-                Get in touch
-                <div className="ml-2 w-8 h-8 rounded-full bg-[#1A4D43] flex items-center justify-center text-white overflow-hidden relative">
-                  <ArrowUpRight size={18} className="absolute transition-transform duration-300 group-hover:translate-x-6 group-hover:-translate-y-6" />
-                  <ArrowUpRight size={18} className="absolute -translate-x-6 translate-y-6 transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0" />
-                </div>
-              </a>
+                Scale Your Business with Pooja Associates
+              </h1>
+
+              <p 
+                className="text-[#E8F5EE] text-lg md:text-xl font-normal leading-[1.6] mb-10 max-w-[500px] opacity-90"
+                style={{
+                  opacity: isLoaded ? 0.9 : 0,
+                  transform: isLoaded ? 'translateY(0)' : 'translateY(30px)',
+                  transition: 'opacity 700ms ease-out, transform 700ms ease-out',
+                  transitionDelay: '500ms',
+                }}
+              >
+                Growth-focused marketing and promotion services for registered and subscribed customers. Elevate your brand with expert insights and tailored strategies.
+              </p>
+
+              <div 
+                className="flex flex-wrap items-center gap-4"
+                style={{
+                  opacity: isLoaded ? 1 : 0,
+                  transform: isLoaded ? 'translateY(0)' : 'translateY(30px)',
+                  transition: 'opacity 700ms ease-out, transform 700ms ease-out',
+                  transitionDelay: '600ms',
+                }}
+              >
+                <a 
+                  href="#contact" 
+                  className="group inline-flex items-center justify-center bg-white text-[#1A4D43] px-8 py-4 rounded-full font-semibold text-base transition-all duration-300 hover:bg-[#E8F5EE] hover:scale-105 hover:shadow-lg"
+                >
+                  Join Us
+                  <div className="ml-2 w-8 h-8 rounded-full bg-[#1A4D43] flex items-center justify-center text-white overflow-hidden relative">
+                    <ArrowUpRight size={18} className="absolute transition-transform duration-300 group-hover:translate-x-6 group-hover:-translate-y-6" />
+                    <ArrowUpRight size={18} className="absolute -translate-x-6 translate-y-6 transition-transform duration-300 group-hover:translate-x-0 group-hover:translate-y-0" />
+                  </div>
+                </a>
               
               <a 
                 href="#services" 

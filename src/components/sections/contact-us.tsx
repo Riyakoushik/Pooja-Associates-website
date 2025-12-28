@@ -17,9 +17,9 @@ const ContactUs = () => {
                 <span className="text-white text-sm font-medium uppercase tracking-wider">Contact us</span>
               </div>
 
-              <h2 className="text-white text-[40px] md:text-[48px] font-semibold leading-[1.2] mb-10 max-w-[400px]">
-                Get in touch with our experts team
-              </h2>
+                <h2 className="text-white text-[40px] md:text-[48px] font-semibold leading-[1.2] mb-10 max-w-[400px]">
+                  Join Pooja Associates for Business Growth
+                </h2>
 
               <form className="grid grid-cols-1 md:grid-cols-2 gap-4" onSubmit={(e) => e.preventDefault()}>
                 <div className="relative group">
@@ -48,11 +48,13 @@ const ContactUs = () => {
                     className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white/60 focus:outline-none focus:border-white transition-all duration-300 appearance-none cursor-pointer focus:bg-white/15 focus:scale-[1.02]"
                     defaultValue=""
                   >
-                    <option value="" disabled>Service...</option>
-                    <option value="consulting">Business Consulting</option>
-                    <option value="efficiency">Operational Efficiency</option>
-                    <option value="market">Market Research</option>
-                  </select>
+                      <option value="" disabled>Service...</option>
+                      <option value="content">Content Design & Marketing</option>
+                      <option value="social">Social Media Marketing</option>
+                      <option value="analysis">Business Analysis</option>
+                      <option value="telemarketing">Tele-marketing</option>
+                      <option value="loans">Business Loan Processing</option>
+                    </select>
                   <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/60 transition-transform duration-300 group-focus-within:rotate-180">
                     <ChevronDown size={18} />
                   </div>

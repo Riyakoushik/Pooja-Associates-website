@@ -41,25 +41,19 @@ const Navbar = () => {
             transition: 'opacity 600ms ease-out 100ms, transform 600ms ease-out 100ms',
           }}
         >
-          <Link href="/" className="flex items-center gap-2.5 no-underline group">
-            <div 
-              className="flex items-center justify-center w-8 h-8 rounded-[10px] bg-[#1F514C] transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"
-              style={{
-                boxShadow: "rgba(0, 0, 0, 0.07) 0px 0px 12px 0px, rgba(255, 255, 255, 0.25) 0px 2px 4px 0px inset"
-              }}
-            >
-              <Image 
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5aade3a5-fd00-4189-b091-576124594133-stratex-framer-website/assets/svgs/AUOOfMLqx3UrCzpH7eIka9rF8-1.svg"
-                width={15}
-                height={15}
-                alt="Stratex Logo Icon"
-                className="w-[15px] h-[15px]"
-              />
-            </div>
-            <span className="text-[22px] font-semibold text-[#141414] tracking-tight font-display transition-colors duration-300 group-hover:text-[#1A4D43]">
-              Stratex
-            </span>
-          </Link>
+            <Link href="/" className="flex items-center gap-2.5 no-underline group">
+              <div 
+                className="flex items-center justify-center w-8 h-8 rounded-[10px] bg-[#1F514C] transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"
+                style={{
+                  boxShadow: "rgba(0, 0, 0, 0.07) 0px 0px 12px 0px, rgba(255, 255, 255, 0.25) 0px 2px 4px 0px inset"
+                }}
+              >
+                <span className="text-white font-bold text-sm">PA</span>
+              </div>
+              <span className="text-[22px] font-semibold text-[#141414] tracking-tight font-display transition-colors duration-300 group-hover:text-[#1A4D43]">
+                Pooja Associates
+              </span>
+            </Link>
         </div>
 
         <div className="hidden md:flex items-center gap-8">
@@ -90,12 +84,12 @@ const Navbar = () => {
             transition: 'opacity 600ms ease-out 400ms, transform 600ms ease-out 400ms',
           }}
         >
-          <a 
-            href="#contact" 
-            className="group flex items-center gap-2.5 bg-[#1A4D43] text-white py-2.5 px-6 rounded-full text-[16px] font-semibold transition-all duration-300 no-underline hover:bg-[#153d35] hover:scale-105 hover:shadow-lg active:scale-95"
-          >
-            <span>Get in touch</span>
-            <div className="relative w-5 h-5 flex items-center justify-center bg-white rounded-full transition-all duration-300 group-hover:rotate-45">
+            <a 
+              href="#contact" 
+              className="group flex items-center gap-2.5 bg-[#1A4D43] text-white py-2.5 px-6 rounded-full text-[16px] font-semibold transition-all duration-300 no-underline hover:bg-[#153d35] hover:scale-105 hover:shadow-lg active:scale-95"
+            >
+              <span>Join Us</span>
+              <div className="relative w-5 h-5 flex items-center justify-center bg-white rounded-full transition-all duration-300 group-hover:rotate-45">
               <svg 
                 width="12" 
                 height="12" 

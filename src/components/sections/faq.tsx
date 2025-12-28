@@ -36,11 +36,11 @@ const faqData: FAQItem[] = [
     question: "Can small businesses afford your services?",
     answer: "Absolutely. We offer flexible pricing tiers and modular consulting services designed to scale with your business size and budget requirements."
   },
-  {
-    id: "start",
-    question: "How do I get started?",
-    answer: "Simply use our 'Get in touch' form or book an initial consultation. We'll set up a discovery call to discuss your goals and how Stratex can best support your journey."
-  }
+    {
+      id: "start",
+      question: "How do I get started?",
+      answer: "Simply use our 'Join Us' form or call us directly. We'll set up a discovery call to discuss your goals and how Pooja Associates can best support your journey."
+    }
 ];
 
 const FAQSection: React.FC = () => {

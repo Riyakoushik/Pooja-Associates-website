@@ -8,33 +8,33 @@ import useEmblaCarousel from 'embla-carousel-react';
 
 const services = [
   {
-    title: "Business consulting",
-    description: "Gain a clear roadmap for growth with tailored strategies that align with your goals.",
+    title: "Content Design & Marketing",
+    description: "Creative storytelling and strategic content to capture your audience's attention.",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5aade3a5-fd00-4189-b091-576124594133-stratex-framer-website/assets/images/0YczDvjwpwN80wyyW0HHaSg0VA-2.jpg",
   },
   {
-    title: "Operational efficiency",
-    description: "Streamline workflows and optimize processes to boost productivity and reduce costs.",
+    title: "Social Media Marketing",
+    description: "Building your brand presence across all major social platforms with engagement-driven campaigns.",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5aade3a5-fd00-4189-b091-576124594133-stratex-framer-website/assets/images/iL1g2JceXoecOESZCnxxGh4SA-3.jpg",
   },
   {
-    title: "Market research & analysis",
-    description: "Make informed decisions with in-depth market insights and competitor analysis.",
+    title: "Business Analysis",
+    description: "Data-driven insights to optimize your operations and drive sustainable growth.",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5aade3a5-fd00-4189-b091-576124594133-stratex-framer-website/assets/images/F8bRxnZXtathTlYe6oa9P55kjsY-4.jpg",
   },
   {
-    title: "Digital transformation",
-    description: "Leverage cutting-edge technology to modernize your business and stay ahead.",
+    title: "Digital & Social Media",
+    description: "Comprehensive digital strategies including email marketing and ad creation for maximum reach.",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5aade3a5-fd00-4189-b091-576124594133-stratex-framer-website/assets/images/0YczDvjwpwN80wyyW0HHaSg0VA-2.jpg",
   },
   {
-    title: "Strategic planning",
-    description: "Develop long-term roadmaps to ensure sustainable growth and competitive advantage.",
+    title: "Listing Services",
+    description: "Get your business noticed with professional app listing and subscription management.",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5aade3a5-fd00-4189-b091-576124594133-stratex-framer-website/assets/images/iL1g2JceXoecOESZCnxxGh4SA-3.jpg",
   },
   {
-    title: "Risk management",
-    description: "Identify and mitigate potential risks to protect your business assets and reputation.",
+    title: "Business Loan Processing",
+    description: "Expert assistance in navigating and securing the right financing for your business needs.",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/5aade3a5-fd00-4189-b091-576124594133-stratex-framer-website/assets/images/F8bRxnZXtathTlYe6oa9P55kjsY-4.jpg",
   }
 ];
@@ -89,7 +89,7 @@ export default function ServicesCarousel() {
           </div>
 
           <h2 className="text-[48px] font-semibold text-[#121212] leading-[1.2] mb-16 max-w-[700px] mx-auto">
-            Reliable expertise to drive your greatest success
+            Comprehensive solutions for your business growth
           </h2>
         </AnimatedSection>
       </div>
