@@ -3,7 +3,6 @@ import HeroSection from "@/components/sections/hero";
 import Partners from "@/components/sections/partners";
 import WhyUs from "@/components/sections/why-us";
 import ServicesCarousel from "@/components/sections/services-carousel";
-import TestimonialBanner from "@/components/sections/testimonial-banner";
 import FeaturesGrid from "@/components/sections/features-grid";
 import Pricing from "@/components/sections/pricing";
 import ProcessSteps from "@/components/sections/process-steps";
@@ -22,7 +21,6 @@ export default function Home() {
         <Partners />
         <WhyUs />
         <ServicesCarousel />
-        <TestimonialBanner />
         <FeaturesGrid />
         <Pricing />
         <ProcessSteps />
