@@ -86,14 +86,19 @@ const ContactUs = () => {
                   ></textarea>
                 </div>
 
-                <div className="md:col-span-2 pt-4">
-                  <button className="group flex items-center gap-3 bg-white text-[#1A4D43] transition-all duration-300 font-semibold px-6 py-3 rounded-full hover:bg-[#E8F5EE] hover:scale-105 hover:shadow-lg active:scale-95">
-                    <span>Submit your Form</span>
-                    <div className="w-8 h-8 rounded-full bg-[#1A4D43] flex items-center justify-center text-white ring-2 ring-transparent group-hover:ring-white/20 transition-all duration-300 group-hover:rotate-45">
-                      <ArrowRight size={16} />
-                    </div>
-                  </button>
-                </div>
+                  <div className="md:col-span-2 pt-4">
+                    <a 
+                      href="https://wa.me/918357892019"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-3 bg-white text-[#1A4D43] transition-all duration-300 font-semibold px-6 py-3 rounded-full hover:bg-[#E8F5EE] hover:scale-105 hover:shadow-lg active:scale-95 no-underline"
+                    >
+                      <span>Join us on WhatsApp</span>
+                      <div className="w-8 h-8 rounded-full bg-[#1A4D43] flex items-center justify-center text-white ring-2 ring-transparent group-hover:ring-white/20 transition-all duration-300 group-hover:rotate-45">
+                        <ArrowRight size={16} />
+                      </div>
+                    </a>
+                  </div>
               </form>
             </AnimatedSection>
 

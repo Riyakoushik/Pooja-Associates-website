@@ -73,10 +73,12 @@ const HeroSection: React.FC = () => {
                   transitionDelay: '600ms',
                 }}
               >
-                <a 
-                  href="#contact" 
-                  className="group inline-flex items-center justify-center bg-white text-[#1A4D43] px-8 py-4 rounded-full font-semibold text-base transition-all duration-300 hover:bg-[#E8F5EE] hover:scale-105 hover:shadow-lg"
-                >
+                  <a 
+                    href="https://wa.me/918357892019" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center justify-center bg-white text-[#1A4D43] px-8 py-4 rounded-full font-semibold text-base transition-all duration-300 hover:bg-[#E8F5EE] hover:scale-105 hover:shadow-lg"
+                  >
                   Join Us
                   <div className="ml-2 w-8 h-8 rounded-full bg-[#1A4D43] flex items-center justify-center text-white overflow-hidden relative">
                     <ArrowUpRight size={18} className="absolute transition-transform duration-300 group-hover:translate-x-6 group-hover:-translate-y-6" />

@@ -46,7 +46,9 @@ const ProcessSteps = () => {
           </h2>
 
           <a 
-            href="#contact" 
+            href="https://wa.me/918357892019" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="group flex items-center gap-2 px-6 py-3 bg-[#1A4D43] text-white rounded-full transition-all duration-300 hover:bg-[#143B33] hover:scale-105 hover:shadow-lg"
           >
             <span className="text-[16px] font-semibold">Get in touch</span>

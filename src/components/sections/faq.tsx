@@ -39,7 +39,7 @@ const faqData: FAQItem[] = [
     {
       id: "start",
       question: "How do I get started?",
-      answer: "Simply use our 'Join Us' form or call us directly. We'll set up a discovery call to discuss your goals and how Pooja Associates can best support your journey."
+      answer: "Simply click any 'Join Us' button to chat with us on WhatsApp or call us directly. We'll set up a discovery call to discuss your goals and how Pooja Associates can best support your journey."
     }
 ];
 

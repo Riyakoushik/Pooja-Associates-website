@@ -51,12 +51,14 @@ const Pricing = () => {
                   <span className="text-brand-text-gray text-[18px]">/Month</span>
                 </div>
 
-                <a 
-                  href="#contact" 
-                  className="w-full py-4 px-6 mb-10 rounded-full border border-border text-center text-brand-text-dark font-semibold text-[16px] transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-[1.02]"
-                >
-                  Join Us
-                </a>
+                  <a 
+                    href="https://wa.me/918357892019" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-4 px-6 mb-10 rounded-full border border-border text-center text-brand-text-dark font-semibold text-[16px] transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary hover:scale-[1.02]"
+                  >
+                    Join Us
+                  </a>
 
                 <ul className="space-y-4">
                   {[
@@ -99,12 +101,14 @@ const Pricing = () => {
                   <span className="text-[18px] text-brand-text-gray opacity-80">/Year</span>
                 </div>
 
-                <a 
-                  href="#contact" 
-                  className="w-full py-4 px-6 mb-10 rounded-full bg-brand-carbon text-white text-center font-semibold text-[16px] transition-all duration-300 hover:bg-primary hover:scale-[1.02] hover:shadow-lg relative z-10"
-                >
-                  Join Us
-                </a>
+                  <a 
+                    href="https://wa.me/918357892019" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-4 px-6 mb-10 rounded-full bg-brand-carbon text-white text-center font-semibold text-[16px] transition-all duration-300 hover:bg-primary hover:scale-[1.02] hover:shadow-lg relative z-10"
+                  >
+                    Join Us
+                  </a>
 
                 <ul className="space-y-4 relative z-10">
                   {[

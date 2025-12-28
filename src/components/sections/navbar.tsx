@@ -78,7 +78,9 @@ const Navbar = () => {
           }}
         >
             <a 
-              href="#contact" 
+              href="https://wa.me/918357892019" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex items-center gap-2.5 bg-[#1A4D43] text-white py-2.5 px-6 rounded-full text-[16px] font-semibold transition-all duration-300 no-underline hover:bg-[#153d35] hover:scale-105 hover:shadow-lg active:scale-95"
             >
               <span>Join Us</span>
