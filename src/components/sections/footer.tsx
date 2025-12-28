@@ -59,19 +59,6 @@ const Footer = () => {
         <div className="pt-8 border-t border-[#E6E6E6] flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2 text-[14px] text-[#555555]">
             <span>Copyright@2024</span>
-            <span className="w-1 h-1 bg-[#555555] rounded-full"></span>
-            <span>Made in Framer</span>
-          </div>
-          
-          <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1.5 p-2 bg-white border border-[#E6E6E6] rounded-md shadow-sm">
-               <svg width="12" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18">
-                <path d="M0 0h12v6H6v6H0V0z" fill="#000"></path>
-                <path d="M6 6h6v6H6V6z" fill="#000"></path>
-                <path d="M0 12h6v6H0v-6z" fill="#000"></path>
-              </svg>
-              <span className="text-[12px] font-bold text-[#121212]">Made in Framer</span>
-            </div>
           </div>
         </div>
       </div>
